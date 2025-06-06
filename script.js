@@ -2,7 +2,7 @@ let stiftungen = [];
 let plzDb = {};
 let datenGeladen = false;
 
-// Lade beide JSON-Dateien parallel
+// Lade beide JSON-Dateien gleichzeitig
 Promise.all([
   fetch("stiftungen.json").then((res) => res.json()),
   fetch("plz-db.json").then((res) => res.json())
@@ -29,8 +29,7 @@ function searchStiftungen() {
   resultsDiv.innerHTML = "";
 
   if (!datenGeladen) {
-    resultsDiv.innerHTML =
-      "<p class='text-yellow-500'>⏳ Die Daten werden noch geladen. Bitte einen Moment warten...</p>";
+    resultsDiv.innerHTML = "<p class='text-yellow-500'>⏳ Die Daten werden noch geladen. Bitte warten...</p>";
     return;
   }
 
@@ -80,7 +79,7 @@ function searchStiftungen() {
     });
   }
 
-  if (!isRegio && !regionals.length && !bundesweit.length) {
+  if (!isRegio && bundesweit.length === 0) {
     resultsDiv.innerHTML = "<p class='text-gray-500'>Keine Stiftungen gefunden.</p>";
   }
 }
