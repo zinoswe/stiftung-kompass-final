@@ -1,0 +1,19 @@
+{
+  "49074": { "ort": "Osnabrück", "bundesland": "Niedersachsen", "lat": 52.2799, "lon": 8.0472 },
+  "49088": { "ort": "Osnabrück", "bundesland": "Niedersachsen", "lat": 52.3, "lon": 8.033 },
+  "49134": { "ort": "Bramsche", "bundesland": "Niedersachsen", "lat": 52.4086, "lon": 7.9784 },
+  "80331": { "ort": "München", "bundesland": "Bayern", "lat": 48.1371, "lon": 11.5754 },
+  "50667": { "ort": "Köln", "bundesland": "Nordrhein-Westfalen", "lat": 50.9384, "lon": 6.96 },
+  "10115": { "ort": "Berlin", "bundesland": "Berlin", "lat": 52.5321, "lon": 13.3849 },
+  "30159": { "ort": "Hannover", "bundesland": "Niedersachsen", "lat": 52.3759, "lon": 9.732 },
+  "20095": { "ort": "Hamburg", "bundesland": "Hamburg", "lat": 53.5502, "lon": 10.0014 },
+  "90402": { "ort": "Nürnberg", "bundesland": "Bayern", "lat": 49.4478, "lon": 11.0775 },
+  "68159": { "ort": "Mannheim", "bundesland": "Baden-Württemberg", "lat": 49.4875, "lon": 8.466 },
+  "60311": { "ort": "Frankfurt am Main", "bundesland": "Hessen", "lat": 50.1109, "lon": 8.6821 },
+  "01067": { "ort": "Dresden", "bundesland": "Sachsen", "lat": 51.0504, "lon": 13.7373 },
+  "39104": { "ort": "Magdeburg", "bundesland": "Sachsen-Anhalt", "lat": 52.13, "lon": 11.6198 },
+  "99084": { "ort": "Erfurt", "bundesland": "Thüringen", "lat": 50.9787, "lon": 11.0328 },
+  "14467": { "ort": "Potsdam", "bundesland": "Brandenburg", "lat": 52.4009, "lon": 13.0591 },
+  "19053": { "ort": "Schwerin", "bundesland": "Mecklenburg-Vorpommern", "lat": 53.6294, "lon": 11.4136 },
+  "66111": { "ort": "Saarbrücken", "bundesland": "Saarland", "lat": 49.2331, "lon": 6.9969 }
+}
