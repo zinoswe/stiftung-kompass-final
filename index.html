@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stiftungs-Kompass</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <header class="bg-white shadow-md p-4 text-center">
+    <h1 class="text-2xl font-bold">Stiftungs-Kompass</h1>
+    <p class="text-sm text-gray-600">Finden Sie passende Förderstiftungen für Ihr Pflegeprojekt</p>
+  </header>
+
+  <main class="max-w-2xl mx-auto p-4">
+    <label for="search" class="block text-lg font-medium mb-2">Stadt oder Postleitzahl eingeben:</label>
+    <div class="flex gap-2 mb-6">
+      <input id="search" type="text" class="flex-1 p-2 border border-gray-300 rounded-md" placeholder="z. B. Osnabrück oder 49088">
+      <button onclick="searchStiftungen()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Suchen</button>
+    </div>
+
+    <div id="results" class="space-y-4">
+      <!-- Suchergebnisse werden hier angezeigt -->
+    </div>
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 mt-10 mb-4">
+    © 2025 Stiftungs-Kompass | Masterarbeit Projekt
+  </footer>
+
+  <script>
+    let stiftungen = [];
+
+    fetch('stiftungen.json')
+      .then(res => res.json())
+      .then(data => stiftungen = data);
+
+    const bundeslaenderRegio = ['Niedersachsen', 'Bayern'];
+
+    async function searchStiftungen() {
+      const input = document.getElementById('search').value.trim().toLowerCase();
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+
+      if (!input) {
+        resultsDiv.innerHTML = '<p class="text-red-500">Bitte geben Sie eine Stadt oder Postleitzahl ein.</p>';
+        return;
+      }
+
+      // Dummy-Mapping für Orte/PLZ zu Bundesland (vereinfachtes Beispiel)
+      const plzOrtZuBundesland = {
+        'osnabrück': 'Niedersachsen',
+        '49074': 'Niedersachsen',
+        'bramsche': 'Niedersachsen',
+        '49565': 'Niedersachsen',
+        'münchen': 'Bayern',
+        '80331': 'Bayern'
+      };
+
+      const bundesland = plzOrtZuBundesland[input] || 'anderes';
+      const isRegio = bundeslaenderRegio.includes(bundesland);
+
+      const bundesweite = stiftungen.filter(s => s.typ === 'bundesweit');
+      const regionale = stiftungen.filter(s => isRegio && s.typ === 'regional' && s.bundesland.toLowerCase() === bundesland.toLowerCase());
+
+      if (regionale.length > 0) {
+        const stiftung = regionale[0];
+        resultsDiv.innerHTML += renderStiftung(stiftung);
+      }
+
+      bundesweite.forEach(stiftung => {
+        resultsDiv.innerHTML += renderStiftung(stiftung);
+      });
+
+      if (!isRegio && bundesweite.length === 0) {
+        resultsDiv.innerHTML = '<p class="text-gray-500">Es wurden keine passenden Stiftungen gefunden.</p>';
+      }
+    }
+
+    function renderStiftung(s) {
+      return `
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-xl font-semibold">${s.name}</h2>
+          <p class="text-sm text-gray-600">Bundesland: ${s.bundesland}</p>
+          <p class="mt-2">${s.beschreibung.slice(0, 400)}...</p>
+          ${s.link ? `<a href="${s.link}" target="_blank" class="inline-block mt-2 text-blue-600 hover:underline">Zum Antrag</a>` : ''}
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
