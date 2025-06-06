@@ -1,15 +1,13 @@
 let stiftungen = [];
-let plzDb = {
-  "49074": { ort: "Osnabrück", bundesland: "Niedersachsen", lat: 52.2799, lon: 8.0472 },
-  "49088": { ort: "Osnabrück", bundesland: "Niedersachsen", lat: 52.3, lon: 8.033 },
-  "80331": { ort: "München", bundesland: "Bayern", lat: 48.1371, lon: 11.5754 },
-  "50667": { ort: "Köln", bundesland: "Nordrhein-Westfalen", lat: 50.9384, lon: 6.96 },
-  "10115": { ort: "Berlin", bundesland: "Berlin", lat: 52.5321, lon: 13.3849 }
-};
+let plzDb = {};
 
 fetch("stiftungen.json")
   .then(res => res.json())
-  .then(data => stiftungen = data);
+  .then(data => (stiftungen = data));
+
+fetch("plz-db.json")
+  .then(res => res.json())
+  .then(data => (plzDb = data));
 
 function haversine(lat1, lon1, lat2, lon2) {
   const toRad = x => x * Math.PI / 180;
@@ -27,8 +25,8 @@ function searchStiftungen() {
   resultsDiv.innerHTML = "";
 
   const plzEntry = Object.entries(plzDb).find(
-    ([plz, info]) =>
-      plz === input || info.ort.toLowerCase() === input
+    ([plz, data]) =>
+      plz === input || data.ort.toLowerCase() === input
   );
 
   if (!plzEntry) {
@@ -37,8 +35,8 @@ function searchStiftungen() {
   }
 
   const [plz, ortInfo] = plzEntry;
+  const isRegio = ["Niedersachsen", "Bayern"].includes(ortInfo.bundesland);
   const { lat, lon, bundesland } = ortInfo;
-  const isRegio = ["Niedersachsen", "Bayern"].includes(bundesland);
 
   const regionals = stiftungen
     .filter(s => s.typ === "regional" && s.lat && s.lon && s.bundesland === bundesland)
@@ -58,7 +56,7 @@ function searchStiftungen() {
     bundesweit.forEach(s => resultsDiv.innerHTML += renderStiftung(s, false));
   }
 
-  if (!isRegio && !bundesweit.length) {
+  if (!isRegio && !regionals.length && !bundesweit.length) {
     resultsDiv.innerHTML = "<p class='text-gray-500'>Keine Stiftungen gefunden.</p>";
   }
 }
