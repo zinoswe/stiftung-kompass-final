@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ihr Stiftungsfinder für Alten & Pflegeheime</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Stiftungsfinder für Alten- & Pflegeheime</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     body {
       background: linear-gradient(to bottom right, #f0f9ff, #ffffff);
@@ -12,32 +12,22 @@
   </style>
 </head>
 <body class="text-gray-900 min-h-screen flex flex-col">
-  <header class="bg-white shadow-lg p-8 text-center">
-    <div class="flex justify-center mb-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/3082/3082383.png" alt="Logo" class="w-16 h-16">
-    </div>
-    <h1 class="text-3xl md:text-4xl font-extrabold text-blue-800">Ihr Stiftungsfinder für Alten & Pflegeheime</h1>
-    <p class="text-md text-gray-600 mt-2">Schnell und kostenlos passende Förderstiftungen in Ihrer Nähe finden</p>
+  <header class="bg-white shadow p-6 text-center">
+    <h1 class="text-3xl font-bold text-blue-800">Ihr Stiftungsfinder für Alten- & Pflegeheime</h1>
+    <p class="text-sm text-gray-600 mt-2">Finden Sie passende Förderstiftungen in Ihrer Region oder bundesweit</p>
   </header>
 
-  <main class="flex-grow max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-10">
-    <p class="text-gray-700 text-lg mb-6">
-      Diese Seite richtet sich an <strong>Alten- und Pflegeheime</strong>, die auf der Suche nach finanzieller Unterstützung für Projekte und Maßnahmen sind. Geben Sie Ihren Ort oder Ihre Postleitzahl ein und erhalten Sie Fördermöglichkeiten in Ihrer Region und bundesweit.
-    </p>
-
-    <label for="search" class="block text-xl font-semibold mb-3 text-gray-700">Stadt oder Postleitzahl eingeben:</label>
+  <main class="flex-grow max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-md mt-6">
+    <label for="search" class="block text-xl font-semibold mb-3">PLZ oder Ort:</label>
     <div class="flex flex-col sm:flex-row gap-3 mb-6">
-      <input id="search" type="text" class="flex-1 p-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-400" placeholder="z. B. Osnabrück oder 49088">
-      <button onclick="searchStiftungen()" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition">Suchen</button>
+      <input id="search" type="text" class="flex-1 p-3 border border-gray-300 rounded-md" placeholder="z. B. Osnabrück oder 49088" />
+      <button onclick="searchStiftungen()" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Suchen</button>
     </div>
-
-    <div id="results" class="space-y-6">
-      <!-- Suchergebnisse werden hier angezeigt -->
-    </div>
+    <div id="results" class="space-y-6"></div>
   </main>
 
-  <footer class="text-center text-sm text-gray-600 mt-10 mb-6">
-    © 2025 Stiftungs-Kompass – Masterarbeit Projekt
+  <footer class="text-center text-sm text-gray-500 mt-10 mb-6">
+    © 2025 – Masterarbeit Stiftungs-Kompass
   </footer>
 
   <script src="script.js"></script>
