@@ -40,64 +40,6 @@
     © 2025 Stiftungs-Kompass – Masterarbeit Projekt
   </footer>
 
-  <script>
-    let stiftungen = [];
-
-    fetch('stiftungen.json')
-      .then(res => res.json())
-      .then(data => stiftungen = data);
-
-    const bundeslaenderRegio = ['Niedersachsen', 'Bayern'];
-
-    async function searchStiftungen() {
-      const input = document.getElementById('search').value.trim().toLowerCase();
-      const resultsDiv = document.getElementById('results');
-      resultsDiv.innerHTML = '';
-
-      if (!input) {
-        resultsDiv.innerHTML = '<p class="text-red-500">Bitte geben Sie eine Stadt oder Postleitzahl ein.</p>';
-        return;
-      }
-
-      const plzOrtZuBundesland = {
-        'osnabrück': 'Niedersachsen',
-        '49074': 'Niedersachsen',
-        'bramsche': 'Niedersachsen',
-        '49565': 'Niedersachsen',
-        'münchen': 'Bayern',
-        '80331': 'Bayern'
-      };
-
-      const bundesland = plzOrtZuBundesland[input] || 'anderes';
-      const isRegio = bundeslaenderRegio.includes(bundesland);
-
-      const bundesweite = stiftungen.filter(s => s.typ === 'bundesweit');
-      const regionale = stiftungen.filter(s => isRegio && s.typ === 'regional' && s.bundesland.toLowerCase() === bundesland.toLowerCase());
-
-      if (regionale.length > 0) {
-        const stiftung = regionale[0];
-        resultsDiv.innerHTML += renderStiftung(stiftung);
-      }
-
-      bundesweite.forEach(stiftung => {
-        resultsDiv.innerHTML += renderStiftung(stiftung);
-      });
-
-      if (!isRegio && bundesweite.length === 0) {
-        resultsDiv.innerHTML = '<p class="text-gray-500">Es wurden keine passenden Stiftungen gefunden.</p>';
-      }
-    }
-
-    function renderStiftung(s) {
-      return `
-        <div class="bg-blue-50 border border-blue-200 p-5 rounded-lg shadow-sm">
-          <h2 class="text-xl font-bold text-blue-800">${s.name}</h2>
-          <p class="text-sm text-gray-700">📍 Bundesland: ${s.bundesland}</p>
-          <p class="mt-2 text-gray-800 leading-relaxed">${s.beschreibung.slice(0, 400)}...</p>
-          ${s.link ? `<a href="${s.link}" target="_blank" class="inline-block mt-3 text-blue-600 font-medium hover:underline">🔗 Zum Antrag / Infos</a>` : ''}
-        </div>
-      `;
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
