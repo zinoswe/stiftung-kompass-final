@@ -1,19 +1,20 @@
 let stiftungen = [];
 let plzDb = {};
+let datenGeladen = false;
 
-// Lade die Stiftungsdaten
-fetch("stiftungen.json")
-  .then((res) => res.json())
-  .then((data) => (stiftungen = data));
-
-// Lade die PLZ-Datenbank (mit Städten ab 10.000 EW)
-fetch("plz-db.json")
-  .then((res) => res.json())
-  .then((data) => (plzDb = data));
+// Lade beide JSON-Dateien parallel
+Promise.all([
+  fetch("stiftungen.json").then((res) => res.json()),
+  fetch("plz-db.json").then((res) => res.json())
+]).then(([stiftungenData, plzData]) => {
+  stiftungen = stiftungenData;
+  plzDb = plzData;
+  datenGeladen = true;
+});
 
 function haversine(lat1, lon1, lat2, lon2) {
   const toRad = (x) => (x * Math.PI) / 180;
-  const R = 6371; // Erdradius in km
+  const R = 6371;
   const dLat = toRad(lat2 - lat1);
   const dLon = toRad(lon2 - lon1);
   const a =
@@ -27,7 +28,12 @@ function searchStiftungen() {
   const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = "";
 
-  // Eingabe mit PLZ oder Ort vergleichen
+  if (!datenGeladen) {
+    resultsDiv.innerHTML =
+      "<p class='text-yellow-500'>⏳ Die Daten werden noch geladen. Bitte einen Moment warten...</p>";
+    return;
+  }
+
   const plzEntry = Object.entries(plzDb).find(
     ([plz, data]) =>
       plz === input || data.ort.toLowerCase() === input
@@ -42,7 +48,6 @@ function searchStiftungen() {
   const isRegio = ["Niedersachsen", "Bayern"].includes(ortInfo.bundesland);
   const { lat, lon, bundesland } = ortInfo;
 
-  // Regionale Stiftungen (nur wenn in Niedersachsen/Bayern)
   const regionals = stiftungen
     .filter(
       (s) =>
@@ -75,7 +80,7 @@ function searchStiftungen() {
     });
   }
 
-  if (!isRegio && !bundesweit.length) {
+  if (!isRegio && !regionals.length && !bundesweit.length) {
     resultsDiv.innerHTML = "<p class='text-gray-500'>Keine Stiftungen gefunden.</p>";
   }
 }
@@ -90,11 +95,7 @@ function renderStiftung(s, showDist) {
       <p class="mt-2 text-gray-800 leading-relaxed">
         ${s.beschreibung.slice(0, 400)}...
       </p>
-      ${
-        s.link
-          ? `<a href="${s.link}" target="_blank" class="inline-block mt-3 text-blue-600 hover:underline">🔗 Zum Antrag / Infos</a>`
-          : ""
-      }
+      ${s.link ? `<a href="${s.link}" target="_blank" class="inline-block mt-3 text-blue-600 hover:underline">🔗 Zum Antrag / Infos</a>` : ""}
     </div>
   `;
 }
