@@ -3,7 +3,7 @@
     "name": "Evangelische Stiftungen Osnabrück",
     "bundesland": "Niedersachsen",
     "typ": "regional",
-    "beschreibung": "Förderfähig sind Projekte zur individuellen Förderung in Pflegeheimen.",
+    "beschreibung": "Förderfähig sind Projekte zur individuellen Förderung und zur Verbesserung der Lebenssituation älterer Menschen in Pflegeheimen.",
     "link": "https://www.stiftungen-osnabrueck.de/fileadmin/Stiftungen_Osnabrueck/01_Stiftung/Antragsverfahren/Projektfoerderung.pdf",
     "lat": 52.2799,
     "lon": 8.0472
@@ -43,5 +43,281 @@
     "link": "https://www.gkv-spitzenverband.de/media/dokumente/pflegeversicherung/finanzierungs_foerderungsmassnahmen/20230704_Pflege_Foerderung_8Abs8_SGBXI_Muster_Antrag.xlsx",
     "lat": 52.3799,
     "lon": 9.7610
+  },
+  {
+    "name": "GlücksSpirale",
+    "bundesland": "bundesweit",
+    "typ": "bundesweit",
+    "beschreibung": "Soziallotterie zur Förderung der Freien Wohlfahrtspflege in Deutschland. Antragstellung nur über Mitgliedschaft in einem Wohlfahrtsverband.",
+    "link": "https://gluecksspirale.bagfw.de/dokument/2ed668b4-fd04-446b-938a-4fe1ae4bcb6b",
+    "lat": 52.5200,
+    "lon": 13.4050
+  },
+  {
+    "name": "Deutsche Postcode Lotterie",
+    "bundesland": "bundesweit",
+    "typ": "bundesweit",
+    "beschreibung": "Unterstützt soziale Projekte mit nachhaltigem Mehrwert. Fördert unter anderem Maßnahmen gegen Altersarmut und Einsamkeit.",
+    "link": "https://www.postcode-lotterie.de/projektfoerderung",
+    "lat": 51.2277,
+    "lon": 6.7735
+  },
+  {
+    "name": "Stiftung der Sparkasse Osnabrück",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert soziale Projekte in der Region Osnabrück, darunter Alten- und Pflegehilfe.",
+    "link": "https://engagement.sparkasse-osnabrueck.de/de/",
+    "lat": 52.2799,
+    "lon": 8.0472
+  }
+  ,
+  {
+    "name": "Commerzbank-Stiftung",
+    "bundesland": "bundesweit",
+    "typ": "bundesweit",
+    "beschreibung": "Fördert soziale Projekte mit Fokus auf Integration und Inklusion benachteiligter Menschen. Antrag formlos per E-Mail.",
+    "link": "https://www.commerzbank.de/stiftung",
+    "lat": 50.1109,
+    "lon": 8.6821
+  },
+  {
+    "name": "Software AG – Stiftung",
+    "bundesland": "bundesweit",
+    "typ": "bundesweit",
+    "beschreibung": "Fördert Projekte mit ganzheitlichem Ansatz zur Verbesserung der Lebensqualität im Alter. Besonders für innovative Pflegeansätze.",
+    "link": "https://www.software-ag-stiftung.com/foerderung",
+    "lat": 49.8728,
+    "lon": 8.6512
+  },
+  {
+    "name": "Chaja Stiftung",
+    "bundesland": "bundesweit",
+    "typ": "bundesweit",
+    "beschreibung": "Fördert Teilhabe, Gesundheitsförderung und selbstbestimmtes Leben im Alter. Sitz in Frankfurt am Main.",
+    "link": "https://www.chaja-stiftung.de",
+    "lat": 50.1206,
+    "lon": 8.5965
+  },
+  {
+    "name": "Lotte-Lettau-Stiftung",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert musisch aktive Seniorenprojekte wie Musik, Theater und Kunst. Sitz in Hannover.",
+    "link": "",
+    "lat": 52.3791,
+    "lon": 9.7435
+  },
+  {
+    "name": "Bürgerstiftung Hannover",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert Ehrenamt, Selbsthilfe und generationsübergreifende Projekte mit Vorbildcharakter.",
+    "link": "https://www.buergerstiftung-hannover.de",
+    "lat": 52.3791,
+    "lon": 9.7435
+  },
+  {
+    "name": "Hans und Helga Eckensberger-Stiftung",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert Altenhilfe in Braunschweig. Ansprechpartnerin erforderlich.",
+    "link": "",
+    "lat": 52.2643,
+    "lon": 10.5246
+  },
+  {
+    "name": "Bürgerstiftung Braunschweig",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert vielfältige soziale Projekte in Braunschweig, darunter auch für ältere Menschen.",
+    "link": "https://www.buergerstiftung-braunschweig.de",
+    "lat": 52.2643,
+    "lon": 10.5246
+  },
+  {
+    "name": "Friedrich- und Hedwig-Eilers-Stiftung",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert Altenhilfe mit Fokus auf städtische Einrichtungen in Oldenburg.",
+    "link": "",
+    "lat": 53.1439,
+    "lon": 8.2136
+  }
+  ,
+  {
+    "name": "Stiftung der Landessparkasse zu Oldenburg (LzO)",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert Projekte mit regionaler Relevanz und nachhaltiger Wirkung in der Region Oldenburg.",
+    "link": "https://www.lzo.com/de/home/ihre-lzo/gut-fuer-die-region/foerderanfrage.html",
+    "lat": 53.1439,
+    "lon": 8.2136
+  },
+  {
+    "name": "Oldenburger Bürgerstiftung",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert Jugend- und Altenhilfe, Gesundheitswesen und Kultur in Oldenburg.",
+    "link": "",
+    "lat": 53.1439,
+    "lon": 8.2136
+  },
+  {
+    "name": "Bürgerstiftung Cloppenburg",
+    "bundesland": "Niedersachsen",
+    "typ": "regional",
+    "beschreibung": "Fördert Projekte zur Integration, Altenhilfe und gemeinschaftlichem Engagement.",
+    "link": "",
+    "lat": 52.8466,
+    "lon": 8.0471
+  },
+  {
+    "name": "Margarete Ammon Stiftung",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert Alten- und Pflegeprojekte im Raum Bayern. Antrag über formlose Projektskizze.",
+    "link": "",
+    "lat": 48.1371,
+    "lon": 11.5754
+  },
+  {
+    "name": "Antonie Zauner Stiftung",
+    "bundesland": "Bayern",
+    "typ": "bundesweit",
+    "beschreibung": "Fördert innovative soziale Projekte mit messbaren Zielen. Antrag per Formular.",
+    "link": "https://zauner-stiftung.de/wp-content/uploads/2024/07/Antrag.pdf",
+    "lat": 48.1371,
+    "lon": 11.5754
+  },
+  {
+    "name": "Münchner Sparkassen-Altenhilfe Stiftung",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert gemeinnützige Pflegeeinrichtungen im Raum München.",
+    "link": "",
+    "lat": 48.1371,
+    "lon": 11.5754
+  },
+  {
+    "name": "Stiftungsverwaltung der Stadt Nürn
+  ,
+  {
+    "name": "Fürst Stiftung",
+    "bundesland": "Bayern",
+    "typ": "bundesweit",
+    "beschreibung": "Fördert Seniorenprojekte mit Schwerpunkt auf gesellschaftlicher Teilhabe.",
+    "link": "",
+    "lat": 48.3715,
+    "lon": 10.8985
+  },
+  {
+    "name": "Bürgerstiftung Augsburg",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert Projekte in den Bereichen Jugend, Alter, Bildung und Gesundheit.",
+    "link": "",
+    "lat": 48.3715,
+    "lon": 10.8985
+  },
+  {
+    "name": "Bürgerstiftung Augsburger Land",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert generationenübergreifende Projekte mit Modellcharakter.",
+    "link": "",
+    "lat": 48.3715,
+    "lon": 10.8985
+  },
+  {
+    "name": "das Stadtwerk.Sozial und Sportstiftung",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert soziale Projekte mit Bezug auf Alter, Bewegung, Gesundheit in Regensburg.",
+    "link": "",
+    "lat": 49.0134,
+    "lon": 12.1016
+  },
+  {
+    "name": "Bürgerstiftung der Volksbank Regensburg",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert soziale und gemeinnützige Initiativen für ältere Menschen in der Region.",
+    "link": "",
+    "lat": 49.0134,
+    "lon": 12.1016
+  },
+  {
+    "name": "Bürgerstiftung Würzburg und Umgebung",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert soziale Projekte, insbesondere im Bereich Seniorenhilfe und Teilhabe.",
+    "link": "",
+    "lat": 49.7913,
+    "lon": 9.9534
+  },
+  {
+    "name": "Sparkassenstiftung für den Landkreis Würzburg",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert Projekte der Seniorenhilfe mit regionalem Bezug.",
+    "link": "https://www.sparkasse-mainfranken.de/de/home/ihre-sparkasse/engagement/spenden.html",
+    "lat": 49.7913,
+    "lon": 9.9534
+  },
+  {
+    "name": "Stiftergemeinschaft Fürth",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert Seniorenprojekte in Fürth, u. a. Veranstaltungen und Betreuungsangebote.",
+    "link": "",
+    "lat": 49.4771,
+    "lon": 10.9896
+  }
+  ,
+  {
+    "name": "Max und Justine Elsner-Stiftung",
+    "bundesland": "Bayern",
+    "typ": "bundesweit",
+    "beschreibung": "Fördert soziale Projekte mit Schwerpunkt auf Altenhilfe und Teilhabe. Antrag bis 31.1. jährlich.",
+    "link": "",
+    "lat": 49.5905,
+    "lon": 11.0046
+  },
+  {
+    "name": "Stiftung der Kreissparkasse Höchstadt a. d. Aisch",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert Altenhilfe im Landkreis Höchstadt a. d. Aisch. Antragsschluss: 30.11. jedes Jahres.",
+    "link": "",
+    "lat": 49.7056,
+    "lon": 10.8191
+  },
+  {
+    "name": "Bürgerstiftung Erlangen",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert Projekte der Altenhilfe, Inklusion und Ehrenamt in Erlangen.",
+    "link": "",
+    "lat": 49.5978,
+    "lon": 11.0036
+  },
+  {
+    "name": "Stiftungen der Stadt Bamberg",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert gemeinnützige Altenhilfe-Einrichtungen in Bamberg mit Investitionen oder Zuschüssen.",
+    "link": "https://tinyurl.com/yn3cvujq",
+    "lat": 49.8910,
+    "lon": 10.8915
+  },
+  {
+    "name": "Oberfrankenstiftung",
+    "bundesland": "Bayern",
+    "typ": "regional",
+    "beschreibung": "Fördert soziale Einrichtungen in Oberfranken mit innovativem Konzept.",
+    "link": "",
+    "lat": 49.9481,
+    "lon": 11.5789
   }
 ]
